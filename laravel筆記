@@ -1,0 +1,42 @@
+php -v 確定版本
+composer 查看是不是安裝完成
+pwd 目前目錄位置
+ls 查看目前目錄有什麼檔案
+cd c: 進入c槽
+cd xampp 
+cd htdocs
+mkdir laravel 建資料夾
+cd laravel
+composer create-project laravel/laravel example-app
+
+安裝完後
+進apache config 修改documentroot根目錄位置
+#DocumentRoot "C:/xampp/htdocs"
+#<Directory "C:/xampp/htdocs">
+DocumentRoot "C:/xampp/htdocs/laravel/example-app/public"
+<Directory "C:/xampp/htdocs/laravel/example-app/public">
+
+resources/views/welcome.blade.php 首頁檔案
+
+vscode 套件安裝
+path Intellisense
+html in php
+php cs fixer
+
+test.blade.php
+
+Emmet Documentation
+
+ctrl+p 進入wep.php
+Route::get('/', function () {
+    return view('welcome');
+});
+改成下面
+Route::get('/', function () {
+    return view('test');
+});
+首頁就變成test.blade.php
+
+Route::get('/', ->表示網址後位置localhost/
+Route::get('/test123', -> 網址就變成localhost/test123
+
