@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +20,39 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
+// Route::get('/test', function () {
+//     return view('test');
+// })->name('test');
+
+// Route::get('/get_data', function (Request $request) {
+//     dd($request);
+// })->name('get_data');
+
+Route::resource('tests', TestController::class);
+
+Route::get('/aaa', function () {
     return view('test');
+})->name('alink');
+
+Route::get('/init', function () {
+    return view('init');
 });
+Route::get('/', function () {
+    $url=route('get_data');
+    return $url;
+});
+// Route::get('/', function () {
+//     return view('test');
+// });
+
+// Route::get('/abc',function(){
+//     return "hello abc";
+// })->name('abc123');
+
+// Route::get('/user/{id}', function ($id) {
+//     return 'User '.$id;
+// });
+
+// Route::get('/php/{id}/location/{location}', function ($number,$addr) {
+//     return '<h1>hello php student: '.$number.":))<br>addr:".$addr."</h1>";
+// });

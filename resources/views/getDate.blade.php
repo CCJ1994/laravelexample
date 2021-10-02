@@ -7,10 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="{{route('alink')}}">我是要去AAA</a>
-    <a href="">我是要去BBB</a>
-    <a href="">我是要去CCC</a>
-    <a href="">我是要去DDD</a>
+    <form action="{{route('get_data')}}" method="get">
+        <input type="text" name="num1" id="num1">
+        <input type="text" name="num2" id="num2">
+        <input type="submit" >
+    </form>
+    @php
+    @endphp
 
     {{-- <a href="{{route('abc123')}}">go to abc</a> --}}
     {{-- @php

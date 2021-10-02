@@ -27,7 +27,8 @@ test.blade.php
 
 Emmet Documentation
 
-ctrl+p 進入wep.php
+ctrl+p 進入wep.php 
+routes/web.php 可以清楚指向每個路徑顯示的資料
 Route::get('/', function () {
     return view('welcome');
 });
@@ -40,3 +41,34 @@ Route::get('/', function () {
 Route::get('/', ->表示網址後位置localhost/
 Route::get('/test123', -> 網址就變成localhost/test123
 
+
+git 指令
+ctrl+l 清空git bash畫面
+
+必須進去Laravel下的目錄才能使用artisan指令
+php artisan
+
+在phpmyadmin test資料庫建立資料表 
+php artisan migrate
+要記得修改vendor/.env檔 DB_DATABASE=test
+
+Route::get('/user/{id}', function ($id) {
+    return 'User '.$id;
+});
+{id}帶入參數
+
+dd() 類似print_r()
+
+php artisan make:controller PhotoController --resource
+php artisan make:controller TestController --resource ->新增controller
+app/Http
+
+use App\Http\Controllers\PhotoController;
+Route::resource('photos', PhotoController::class);
+
+貼到web.php
+use App\Http\Controllers\TestController;
+Route::resource('tests', TestController::class);
+//localhost/tests
+
+php artisan route:list

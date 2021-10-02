@@ -12,14 +12,5 @@
     <a href="">我是要去CCC</a>
     <a href="">我是要去DDD</a>
 
-    {{-- <a href="{{route('abc123')}}">go to abc</a> --}}
-    {{-- @php
-    $x=100;
-    dd($x);
-    $ary=[1,2,3];
-    dd($ary);
-    dd(route('abc123'));
-    @endphp
-    <a href="./test.blade.php">go to abc</a> --}}
 </body>
 </html>
